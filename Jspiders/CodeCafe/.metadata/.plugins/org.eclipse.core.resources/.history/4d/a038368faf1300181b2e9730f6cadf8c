@@ -1,0 +1,30 @@
+
+import java.util.Random;
+import java.util.Scanner;
+public class FlipCoin {
+	
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the number of times coins to be flpped");
+		int n = s.nextInt();
+		int m,h=0,t=0;
+		Random rn = new Random();
+		//m=rn.nextInt(2);
+		//System.out.println(m);
+		while(n>0){
+			m=rn.nextInt(2);
+			if(m==1)
+				h++;
+			else
+				t++;
+			n--;
+		}
+		double ph,pt;
+		ph=(h/n)*100;
+		pt=(t/n)*100;
+		System.out.println("Percentage of heads = "+ph);
+		System.out.println("Percentage of heads = "+pt);
+		s.close();
+	}
+}

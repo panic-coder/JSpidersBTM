@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;String/src/CheckHowManyTimeWordIsPresent.java&apos; to &apos;CheckHowManyTimeWordsPresent.java&apos;" description="Rename resource &apos;CheckHowManyTimeWordIsPresent.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/CheckHowManyTimeWordIsPresent.java" name="CheckHowManyTimeWordsPresent.java" stamp="1514557783878" updateReferences="true"/>
+</session>

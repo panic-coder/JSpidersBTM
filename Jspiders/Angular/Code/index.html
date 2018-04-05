@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<script src="angular.min.js"></script>
+	<script src = "app.js"></script>
+</head>
+
+<body>
+
+	<div ng-controller="myCtr">
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Id</th>
+				<th>Photo</th>
+				<th>delete</th>
+			</tr>
+
+			<tr ng-repeat="user in gituser">
+				<td>{{user.login}}</td>
+				<td>{{user.id}}</td>
+				<td><img ng-src = "{{user.avatar_url}}"</td>
+				<td ng-click="removeItem(user)">delete</td>
+			</tr>
+		</table>
+
+	</div>
+
+		<!--<div ng-controller="myCtr">
+				<table>
+					<tr>
+						<th>Name</th>
+						<th>age</th>
+						<th>company</th>
+					</tr>
+					
+					<tr ng-repeat="user in users">
+					<td>{{user.name}}</td>
+					<td>{{user.age}}</td>
+					<td>{{user.company}}</td>
+					</tr>
+					
+				</table>
+				</div>
+				<br/>-->
+
+				
+	<!--<div ng-controller="myCtr">
+	<table border="1">
+		<tr>
+			<th>Name</th>
+			<th>id</th>
+			<th>photo</th>
+			<th>runs</th>
+		</tr>
+		
+		<tr ng-repeat="player in players">
+		<td>{{player.name}}</td>
+		<td>{{player.id}}</td>
+		<td><img ng-src="{{player.photo}}"</td>
+		<td>{{player.runs}}</td>
+		</tr>
+		
+	</table>
+	</div>-->
+	
+	<!--
+	<ul ng-repeat="x in array">
+	<li>{{x}}</li>
+	</ul>-->
+</body>
+</html>

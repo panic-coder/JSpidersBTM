@@ -1,0 +1,26 @@
+
+import java.util.*;
+public class Linked {
+
+	public static void main(String[] args) 
+	{
+		LinkedList<String> ls=new LinkedList<String>();
+		ls.add("Rahul");
+		ls.add("Ram");
+		ls.add("Raju");
+		ls.add("Kamal");
+		ls.add("Rahul");
+		System.out.println(ls);
+		ListIterator<String> ltr=ls.listIterator();
+		while(ltr.hasNext())
+		{
+			String s=(String)ltr.next();
+			if(s.equals(s))
+			{
+				ltr.remove();
+			}
+
+		}
+		System.out.println(ls);
+	}
+}

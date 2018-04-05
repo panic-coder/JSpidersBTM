@@ -1,0 +1,19 @@
+{
+  "name": "testjason",
+  "version": "1.0.0",
+  "description": "Zombie",
+  "main": "testjason",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github.com/zombie24x7.git"
+  },
+  "author": "Shubham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/github.com/zombie24x7/issues"
+  },
+  "homepage": "https://github.com/github.com/zombie24x7#readme"
+}

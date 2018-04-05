@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Convert local variable &apos;practice.LinkedList.add().temp&apos; in &apos;practice.LinkedList.add()&apos; to field&#x0D;&#x0A;- Original project: &apos;practice&apos;&#x0D;&#x0A;- Original element: &apos;practice.LinkedList.add().temp&apos;&#x0D;&#x0A;- Field name: &apos;temp&apos;&#x0D;&#x0A;- Initialize field in method&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" description="Convert local variable &apos;temp&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;practice{LinkedList.java" name="temp" selection="572 9" stamp="1521400347001" static="false" version="1.0" visibility="2"/>
+</session>

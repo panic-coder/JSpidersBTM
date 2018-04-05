@@ -1,0 +1,49 @@
+<header>
+        <nav class="cf">
+            <div class="branding"><a ng-href="#/">angularJS</a></div>
+            <ul>
+                <li><a ng-click="logout()">Log out</a></li>
+                <li><a ng-href="#/addpost">Add Post</a></li>
+            </ul>
+    
+        </nav>
+</header>
+    
+<div class="card meetings cf">
+    <div class="textintro">
+      <h1>  {{articles.title}} </h1>
+      <p> {{articles.post}} </p> 
+
+        <section class="card register">
+                <form name="myform"
+                  ng-submit="addPost()"
+                  novalidate>
+              
+                  <div class="textintro">
+                    <h1>Add Post</h1>
+                    <p>To access site features</p>
+                    <p class="message" ng-show="message">{{ message }}</p>
+                  </div>
+              
+                  <fieldset>
+                        <input type="text" name="title" placeholder="Title"
+                        ng-model="articles.title" ng-required="true">
+        
+                
+                        <textarea name="post" id="" cols="30" rows="10"   ng-model="articles.post"></textarea>
+              
+                    
+                  </fieldset>
+
+                 
+              
+                  <button type="submit" class="btn">Add Post</button>
+                 
+                </form>
+              </section>
+              
+
+
+      </div>
+    </div><!-- meetings cf -->
+    

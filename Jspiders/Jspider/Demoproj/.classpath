@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="Shopping"/>
+	<classpathentry kind="src" path="Photosynthesis"/>
+	<classpathentry kind="src" path="Pappu"/>
+	<classpathentry kind="src" path="App"/>
+	<classpathentry kind="src" path="Tickets"/>
+	<classpathentry kind="src" path="BoyChocoGirl"/>
+	<classpathentry kind="src" path="Borrow"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

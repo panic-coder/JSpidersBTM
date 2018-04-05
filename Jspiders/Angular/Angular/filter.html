@@ -1,0 +1,84 @@
+<html lang="en"  ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.6.7/angular-route.min.js"></script>
+  
+    
+</head>
+<body>
+    <input class="form-control" ng-model="search"/>
+    <div ng-controller="myCtr" >
+        <table class="table">
+            <tr>
+                <th>Fisrname</th>
+                <th>lastname</th>
+                <th>Comapany</th>
+                <th>age</th>
+                <th>salary</th>
+                <th>DoB</th>
+                <th>designation</th>
+            </tr>
+            <tr ng-repeat="x in test | filter:search" >
+                <td>{{x.Fisrname | uppercase}}</td>
+                <td>{{x.lastname | lowercase}}</td>
+                <td>{{x.Comapany}}</td>
+                <td>{{x.age}}</td>
+                
+                <td>{{x.salary | currency:"&#8377;"}}</td>
+                <td>{{x.DoB | date:'mm/dd/yy'}}</td>
+                <td>{{x.designation}}</td>
+            </tr>
+        </table>
+    </div>
+  <section ng-app="app" ng-controller="MainCtrl">
+  <span class="label">Ordered By: {{orderByField}}, Reverse Sort: {{reverseSort}}</span><br><br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>
+          <a href="#" ng-click="orderByField='firstName'; reverseSort = !reverseSort">
+          First Name <span ng-show="orderByField == 'firstName'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+          </a>
+        </th>
+        <th>
+          <a href="#" ng-click="orderByField='lastName'; reverseSort = !reverseSort">
+            Last Name <span ng-show="orderByField == 'lastName'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+          </a>
+        </th>
+        <th>
+          <a href="#" ng-click="orderByField='age'; reverseSort = !reverseSort">
+          Age <span ng-show="orderByField == 'age'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+          </a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="emp in data.employees|orderBy:orderByField:reverseSort">
+        <td>{{emp.firstName}}</td>
+        <td>{{emp.lastName}}</td>
+        <td>{{emp.age}}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<form>
+        <input type="text" minlength="9"  placeholder="Enter a name" id="name" onload="myfuction();" required><br /><br />
+        <input type="tell" minlength="10" maxlength="10" placeholder="Enter number" id="num" onload="myfuction();" required><br /><br />
+        <input type="email" placeholder="Enter email" id="email" onload="myfuction();" required ><br /><br />
+        <input type="radio" name="Ticket" value="Gold" id="gold" > Gold
+        <input type="radio" name="Ticket" value="Silver" id="silver"> Silver<br>
+        <input class="val" id="ticket" ><br /><br />
+        <input type="submit">
+</form>
+
+
+    
+</body>
+<script src="app1.js"></script>
+</html>

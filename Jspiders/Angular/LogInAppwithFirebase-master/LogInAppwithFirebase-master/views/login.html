@@ -1,0 +1,29 @@
+<div class="col-md-6 col-md-offset-3">
+    <div ng-controller="registerCtr">
+        <h1>Login</h1>
+        <form action ="#" class="form-group" name="loginForm" novalidate>
+        <div>
+            <label for="email">Email</label>
+            <input class="form-control" type="email" name="email" id="email" ng-model="email" ng-required="true">
+            <!-- <small og-show="loginForm.email.$touched && loginForm.email.$invalid">
+                <p style="display: block; color:red;">Please enter valid email id </p>
+            </small> -->
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input class="form-control" type="password" name="password" id="password" ng-model="password" ng-required="true">
+            <!-- <small og-show="loginForm.password.$touched && loginForm.passowrd.$invalid">
+                <p style="display: block; color:red;">Please enter valid password </p>
+            </small> -->
+        </div>
+
+        <div>
+            <input type="submit" value="submit" class="btn btn-success">
+        </div>
+
+        </form>
+
+   </div>
+
+</div>

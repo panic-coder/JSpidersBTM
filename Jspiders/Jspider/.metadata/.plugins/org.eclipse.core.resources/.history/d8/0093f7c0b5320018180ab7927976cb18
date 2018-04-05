@@ -1,0 +1,24 @@
+package one;
+
+import java.util.Scanner;
+
+public class PatternRaj {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter value for n");
+		int n = s.nextInt();
+		for (int i = 0; i < n; i++)
+			System.out.print("5");
+		int z = 1;
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				if (j == 2) {
+					System.out.print(z);
+					z++;
+				} else
+					System.out.print("5");
+			}
+		}
+		s.close();
+	}
+}

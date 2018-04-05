@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en"  ng-app="testApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="s.css">
+   <script src="angular.min.js"></script>
+   <script src="https://code.angularjs.org/1.6.7/angular-route.min.js"></script>
+   <script src="app.js"></script>
+</head>
+
+<body>
+    <div ng-controller="myCtr">
+
+        <form>
+            <input type="text" placeholder="Custumer Name" required /> </br>
+            <input type="number" placeholder="Phone Number" required /> </br>
+            <input type="email" placeholder="Email" required /> </br>
+            <input type="radio" id="Gold" />
+            <input type="radio" id="Silver" />
+            <input type="submit" value="click" />
+        </form>
+
+            <script>
+                var gold = document.getElementById("gold");
+                var silver = document.getElementById("silver");
+                gold.addEventListener("click",function(){
+                    document.getElementById("ticket").value = "300";
+                });
+                silver.addEventListener("click",function(){
+                    document.getElementById("ticket").value = "200";
+                });
+            </script>
+        
+    </div>
+</body>
+
+</html>

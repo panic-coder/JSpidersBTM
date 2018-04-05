@@ -1,0 +1,57 @@
+package techm;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		ManageEmployee me = new ManageEmployee();
+		
+		Scanner s = new Scanner(System.in);
+		
+		System.out.println("a.add Details: ");
+		System.out.println("b.display Details");
+		System.out.println("c.remove Details");
+		System.out.println("d.exit: ");
+		
+		char ch=s.next().charAt(0);
+		
+		switch (ch) {
+		case 'a':System.out.println("1.enter employee and laptop details: ");
+				 System.out.println("2.assign laptop to an employee");
+				 System.out.println("Enter employee name, id, dept");
+				 String name=s.next();
+				 int id=s.nextInt();
+				 String dept=s.next();
+				 
+				 System.out.println("Enter laptop id, hostname, make");
+				 String lid=s.next();
+				 String hname=s.next();
+				 String make=s.next();
+				 
+				 Laptop l=new Laptop(lid, hname, make, "not assigned");
+				 Employee e = new Employee(id,name,dept,l);
+				 e.getLaptop().setStatus("Assigned");
+				 
+				 boolean b=me.addEmployees(e);
+				 
+			break;
+		
+		case 'b':
+			
+			break;
+			
+		case 'c':
+			
+			break;
+
+		case 'd':
+			
+			break;
+
+		default:
+			break;
+		}
+	}
+
+}

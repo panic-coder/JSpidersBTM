@@ -1,0 +1,62 @@
+package techm;
+
+public class Laptop {
+	private String laptopid;
+	private String hostname;
+	private String make;
+	private String status;
+/*	private String laptopid;
+	private String laptopid;*/
+	
+	public Laptop(String laptopid,String hostname,String make,String status) throws InvalidIdException{
+		super();
+		valideId(laptopid);
+		this.laptopid=laptopid;
+		this.hostname=hostname;
+		this.make=make;
+		this.status=status;
+	}
+	
+	private boolean valideId(String laptopid) throws InvalidIdException{
+		int find=0;
+		if((laptopid.length())==4 && (laptopid.charAt(0)=='L')){
+			for(int i=1;i<laptopid.length();i++){
+				char ch=laptopid.charAt(i);
+				if(ch<'0' || ch>'9'){
+					find=1;
+					break;
+				}
+			}
+			if(find==0)
+				return true;
+		}
+		throw new InvalidIdException("invalid id");
+	}
+
+	public String getLaptopid() {
+		return laptopid;
+	}
+	
+	public String getHostname() {
+		return hostname;
+	}
+	
+	public String getMake() {
+		return make;
+	}
+	
+	public String getStatus(){
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	@Override
+	public String toString() {
+		return "Laptop [laptopid=" + laptopid + ", hostname=" + hostname + ", make=" + make + ", status=" + status
+				+ "]";
+	}
+	
+	
+}
